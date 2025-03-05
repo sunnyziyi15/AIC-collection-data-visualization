@@ -1,4 +1,4 @@
-AIC COLLECTION EXPLORER
+AIC COLLECTION VISUALIZATION
 =======================
 
 Description
@@ -14,7 +14,7 @@ This project provides interactive visualizations of the Art Institute of Chicago
    - This visualization allows users to compare collection counts across different levels.
 
 2. Line Chart:
-   - Focused on the Contemporary Art period (post-1975).
+   - Focused on the Contemporary Art period (1975-2025).
    - Allows users to select different media types.
    - The x-axis represents the artwork's completion year, and the y-axis shows the number of artworks.
    - This chart displays annual trends in artwork counts for the selected media.
@@ -22,13 +22,11 @@ This project provides interactive visualizations of the Art Institute of Chicago
 Installation
 ------------
 This project requires the following Python packages:
-
     pandas>=1.0
     streamlit>=1.0
     plotly>=4.0
 
 To install these dependencies, run the following commands in your terminal:
-
     pip install pandas>=1.0
     pip install streamlit>=1.0
     pip install plotly>=4.0
@@ -50,11 +48,3 @@ Data Source
 The data used in this project is sourced from the Art Institute of Chicago API:
     https://api.artic.edu/
 Hosted by Streamlit.
-
-License
--------
-This project is licensed under the MIT License.
-
-Contact
--------
-For any questions or feedback, please reach out to: your-email@example.com
