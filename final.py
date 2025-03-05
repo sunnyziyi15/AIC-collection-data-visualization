@@ -2,9 +2,11 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
+#read data
 df = pd.read_csv("artic_artworks.csv")
 print(df["artwork_type_title"].unique())
 
+#treemap data cleaning
 us_keywords = [
     "swanson street, 113",
     "united states",
@@ -215,6 +217,7 @@ us_keywords = [
     "new england"
 ]
 
+#define color for treemap
 candy_colors = [
     "#FFC4C6","#FFECD8","#EBC5E3","#DCEAF6","#DCEAF6","#DFEAF6","#FFFEFA","#E4EEC7","#FBF9D7","#FFCCE7","#FFDDF4","#B8E6B3","#F7F1AB","#9EDBA2","#DCD6FF","#DEFFEF","#F8E9E1","#EBC5E3","#F4C8B9","#8CBDBD","#F3DFAD","#F5F8F3", "#FFDCC9"
 ]
@@ -260,10 +263,10 @@ df_agg["artwork_type_title"] = df_agg["artwork_type_title"].fillna("Unknown Type
 
 
 
-
+#treemap title
 st.title("Hierarchical view of AIC collection")
 
-
+#plot treemap
 fig = px.treemap(
     df_agg,
     path=["region", "period", "artwork_type_title"],
@@ -284,7 +287,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 
 
-# data cleaning
+#line chart data cleaning
 df["date_end"] = pd.to_numeric(df["date_end"], errors="coerce")
 df = df.dropna(subset=["date_end"])
 df_contemporary = df[(df["date_end"] >= 1975) & (df["date_end"] <= 2025)]
