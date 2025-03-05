@@ -2,6 +2,8 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
+st.title("The Art Institute of Chicago Collection Visualization")
+
 #read data
 df = pd.read_csv("artic_artworks.csv")
 print(df["artwork_type_title"].unique())
