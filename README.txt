@@ -21,11 +21,6 @@ This project provides interactive visualizations of the Art Institute of Chicago
 
 Installation
 ------------
-This project requires the following Python packages:
-    pandas>=1.0
-    streamlit>=1.0
-    plotly>=4.0
-
 To install these dependencies, run the following commands in your terminal:
     pip install pandas>=1.0
     pip install streamlit>=1.0
@@ -35,11 +30,11 @@ Usage
 -----
 You have two options to view and interact with this application:
 
-1. **Online Deployment:**  
+1. Online Deployment:
    Visit the deployed Streamlit application at:
        https://sunnyziyi15-aic-collection-data-visualization-final-aytjzy.streamlit.app/
 
-2. **Local Run:**  
+2. Local Run:
    Clone the repository and run the application locally with:
        streamlit run final.py
 
