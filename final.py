@@ -2,15 +2,10 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-import os
-st.write("Current working directory:", os.getcwd())
-st.write("Files in current directory:", os.listdir())
-
 
 st.title("The Art Institute of Chicago Collection Visualization")
 st.markdown("Welcome to **AIC Collection Visualization** – an interactive dashboard showcasing insights from the Art Institute of Chicago's collection.")
 
-st.image("Sky_above_Clouds_IV.png", caption="Sky_Above_Clouds_IV", use_container_width=True)
 
 #read data
 df = pd.read_csv("artic_artworks.csv")
