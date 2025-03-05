@@ -5,7 +5,7 @@ import plotly.express as px
 st.title("The Art Institute of Chicago Collection Visualization")
 st.markdown("Welcome to **AIC Collection Visualization** – an interactive dashboard showcasing insights from the Art Institute of Chicago's collection.")
 
-st.image("Sky_Above_Clouds_IV.png", caption="Sky_Above_Clouds_IV", use_column_width=True)
+st.image("Sky_Above_Clouds_IV.png", caption="Sky_Above_Clouds_IV", use_container_width=True)
 
 #read data
 df = pd.read_csv("artic_artworks.csv")
