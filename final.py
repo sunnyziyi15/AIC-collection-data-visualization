@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px
 
 st.title("The Art Institute of Chicago Collection Visualization")
-
+st.markdown("Welcome to **AIC Collection Visualization** – an interactive dashboard showcasing insights from the Art Institute of Chicago's collection.")
 #read data
 df = pd.read_csv("artic_artworks.csv")
 print(df["artwork_type_title"].unique())
@@ -299,7 +299,7 @@ valid_media = counts_by_media[counts_by_media > 0].index.tolist()
 valid_media = sorted(m.strip() for m in valid_media if isinstance(m, str) and m.strip() != "")
 
 # title
-st.title("Line Chart by Year and Media in Contemporary Art Period")
+st.subheader("Line Chart by Year and Media in Contemporary Art Period")
 
 # selection
 selected_media = st.multiselect(
