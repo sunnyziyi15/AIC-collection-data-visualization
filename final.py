@@ -2,6 +2,11 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
+import os
+st.write("Current working directory:", os.getcwd())
+st.write("Files in current directory:", os.listdir())
+
+
 st.title("The Art Institute of Chicago Collection Visualization")
 st.markdown("Welcome to **AIC Collection Visualization** – an interactive dashboard showcasing insights from the Art Institute of Chicago's collection.")
 
