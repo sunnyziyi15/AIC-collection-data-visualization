@@ -266,7 +266,7 @@ df_agg["artwork_type_title"] = df_agg["artwork_type_title"].fillna("Unknown Type
 
 
 #treemap title
-st.title("Hierarchical view of AIC collection")
+st.subheader("Hierarchical view of AIC collection")
 
 #plot treemap
 fig = px.treemap(
