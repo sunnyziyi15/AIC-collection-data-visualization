@@ -5,7 +5,7 @@ import plotly.express as px
 
 st.title("The Art Institute of Chicago Collection Visualization")
 st.markdown("Welcome to **AIC Collection Visualization** – an interactive dashboard showcasing insights from the Art Institute of Chicago's collection.")
-
+st.markdown(\br)
 
 #read data
 df = pd.read_csv("artic_artworks.csv")
