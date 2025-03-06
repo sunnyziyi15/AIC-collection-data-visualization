@@ -3,6 +3,10 @@ import streamlit as st
 import plotly.express as px
 from PIL import Image
 
+import os
+print(os.getcwd())  # 查看当前工作目录
+st.markdown(os.path.exists('SkyaboveCloudsIV.png'))  # 是否能找到文件
+
 
 
 st.title("The Art Institute of Chicago Collection Visualization")
