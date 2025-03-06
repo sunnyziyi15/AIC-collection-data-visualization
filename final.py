@@ -1,7 +1,8 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-import PIL
+from PIL import Image
+
 
 
 st.title("The Art Institute of Chicago Collection Visualization")
