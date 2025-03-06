@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-from PIL import Image
 
 
 
@@ -9,8 +8,6 @@ st.title("The Art Institute of Chicago Collection Visualization")
 st.markdown("Welcome to **AIC Collection Visualization** – an interactive dashboard showcasing insights from the Art Institute of Chicago's collection.")
 st.markdown("\b")
 
-image = Image.open('SkyaboveCloudsIV.PNG')
-st.image(image,width=100)
 
 #read data
 df = pd.read_csv("artic_artworks.csv")
