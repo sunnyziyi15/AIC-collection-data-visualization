@@ -9,7 +9,7 @@ st.title("The Art Institute of Chicago Collection Visualization")
 st.markdown("Welcome to **AIC Collection Visualization** – an interactive dashboard showcasing insights from the Art Institute of Chicago's collection.")
 st.markdown("\b")
 
-image = Image.open('Sky_above_Clouds_IV.png')
+image = Image.open('SkyaboveCloudsIV.png')
 st.image(image,width=100)
 
 #read data
