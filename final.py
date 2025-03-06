@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px
 
 
-
+#write tile & introduction
 st.title("The Art Institute of Chicago Collection Visualization")
 st.markdown("Welcome to **AIC Collection Visualization** – an interactive dashboard showcasing insights from the Art Institute of Chicago's collection.")
 st.markdown("\b")
@@ -13,6 +13,7 @@ st.markdown("\b")
 df = pd.read_csv("artic_artworks.csv")
 print(df["artwork_type_title"].unique())
 
+#TREEMAP
 #treemap data cleaning
 us_keywords = [
     "swanson street, 113",
@@ -229,7 +230,7 @@ candy_colors = [
     "#FFC4C6","#FFECD8","#EBC5E3","#DCEAF6","#DCEAF6","#DFEAF6","#FFFEFA","#E4EEC7","#FBF9D7","#FFCCE7","#FFDDF4","#B8E6B3","#F7F1AB","#9EDBA2","#DCD6FF","#DEFFEF","#F8E9E1","#EBC5E3","#F4C8B9","#8CBDBD","#F3DFAD","#F5F8F3", "#FFDCC9"
 ]
 
-
+#define US & NON-US
 def map_region(place):
 
     if pd.isnull(place):
@@ -242,7 +243,7 @@ def map_region(place):
 
 df["region"] = df["place_of_origin"].apply(map_region)
 
-
+# Define Art period based on year
 def map_period(year):
 
     if pd.isnull(year):
@@ -256,7 +257,6 @@ def map_period(year):
         return "Pre-modern Art"
 
 df["period"] = df["date_end"].apply(map_period)
-
 
 
 df_agg = df.groupby(
@@ -293,7 +293,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 
 
-
+#LINE CHART
 #line chart data cleaning
 df["date_end"] = pd.to_numeric(df["date_end"], errors="coerce")
 df = df.dropna(subset=["date_end"])
@@ -323,7 +323,7 @@ counts_by_year_media = (
     .sort_values("date_end")
 )
 
-# plot
+#plot line chart
 fig = px.line(
     counts_by_year_media,
     x="date_end",
@@ -337,9 +337,9 @@ fig = px.line(
     title="Number of Artworks in AIC by Year (1975–2025)",
 )
 
-# only int on x-aixs
+#only int on x-aixs
 fig.update_xaxes(dtick=1)
 st.plotly_chart(fig, use_container_width=True)
 
-# source
+#source
 st.markdown("Source: Art Institute of Chicago API [https://api.artic.edu/](https://api.artic.edu/)")
